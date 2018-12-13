@@ -13,6 +13,6 @@ export default {
   @import '../../css/reset.scss';
   .home{
     color: red;
-    font-size: 20px;
+    font-size: 80px;
   }
 </style>

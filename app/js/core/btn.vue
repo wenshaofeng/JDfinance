@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
     <!-- 动态改变class -->
     <div :class="[btnClass,cname]">
         <!-- 插槽 父组件可向此处分发内容 -->
@@ -22,7 +22,7 @@
 
     }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "../../css/element.scss";
 .btn{
 	@include btn;

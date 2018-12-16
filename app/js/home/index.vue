@@ -8,6 +8,7 @@
     <home-product></home-product>
     <home-life></home-life>
     <home-footer></home-footer>
+    <home-navbar></home-navbar>
   </div>
 </template>
 
@@ -21,6 +22,7 @@
   import HomeProduct from './product' // 新品推荐
   import HomeLife from './life' //生活服务
   import HomeFooter from '../public/footer' //底部footer
+  import HomeNavbar from '../public/navbar.vue' //底部导航栏
   export default {
     components: {
       HomeHeader,
@@ -30,7 +32,8 @@
       HomeMoney,
       HomeProduct,
       HomeLife,
-      HomeFooter
+      HomeFooter,
+      HomeNavbar
     }
   }
 </script>

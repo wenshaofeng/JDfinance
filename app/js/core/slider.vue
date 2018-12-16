@@ -56,4 +56,7 @@
         width: .4rem;
         height: .4rem;
     }
+    .swiper-pagination-fraction{
+      font-size: 85%
+    }
 </style>

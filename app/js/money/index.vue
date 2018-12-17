@@ -6,7 +6,8 @@
         <money-lc></money-lc>
         <money-zx></money-zx>
         <money-year></money-year>
-        <money-footer></money-footer>
+        <money-jdzt></money-jdzt>
+        <money-footer cname="mfooter"></money-footer>
         <money-navbar></money-navbar>
     </div>
 </template>
@@ -19,9 +20,11 @@
     import MoneyLc from './lcjx.vue' //理财精选
     import MoneyZx from './lczx.vue' //理财专享
     import MoneyYear from './yearLx.vue' //年度理财
+    import MoneyJdzt from './jdzt.vue' //京东智投
     import MoneyFooter from '../public/footer' //底部footer
     import MoneyNavbar from '../public/navbar.vue' //底部导航栏
     
+
     export default {
         components: {
             MoneyHeader,
@@ -30,12 +33,20 @@
             MoneyLc,
             MoneyZx,
             MoneyYear,
+            MoneyJdzt,
             MoneyFooter,
             MoneyNavbar,
         }
     }
 </script>
 
-<style lang="scss" module>
-
+<style lang="scss" >
+    .mfooter{
+		margin-top: 0px!important;
+		ul{
+			li:first-child{
+				display: none;
+			}
+		}
+	}
 </style>

@@ -8,6 +8,8 @@ import Money from "../money/index.vue"
 import Ious from "../ious/index.vue"
 // 众筹
 import Raise from "../raise/index.vue"
+//下载页
+import DownLoad from '../special/download.vue'
 import "../../css/reset.scss"
 Vue.use(Router)
 
@@ -33,5 +35,10 @@ export default new Router({
             name: "raise",
             component: Raise,
         },
+        {
+            path:'/Download',
+            name:'download',
+            component: DownLoad
+        }
     ],
 })

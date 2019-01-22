@@ -1,9 +1,18 @@
 <template>
     <div :class="$style.header">
-        <span :class="$style.left">
-            <em>注册</em> &nbsp;| &nbsp; <em>登录</em>
+        <span :class="$style.left" v-if="!login">
+            <em>注册</em> &nbsp;| &nbsp; <em>
+                <router-link tag="span" to="/login"> 登录 </router-link>
+            </em>
         </span>
-        <btn :class="$style.btnDownload"> <router-link to="/Download" tag="div">   APP下载</router-link></btn>
+        <span :class="$style.left" v-if="login">
+            <em>二狗子</em> &nbsp;| &nbsp; <em @click="handleClick">
+                退出
+            </em>
+        </span>
+        <btn :class="$style.btnDownload">
+            <router-link to="/Download" tag="div"> APP下载</router-link>
+        </btn>
     </div>
 </template>
 
@@ -15,8 +24,16 @@
             btn
         },
         props: {},
-        data() {
-            return {}
+        computed: {
+             login () {
+                 return  this.$store.state.isLogined
+             }                 
+        },
+        methods: {
+            handleClick() {
+                this.$store.commit('handleLogout')
+                this.$router.push('/')
+            }
         }
 
     }
